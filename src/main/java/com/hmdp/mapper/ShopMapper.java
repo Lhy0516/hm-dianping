@@ -1,7 +1,11 @@
 package com.hmdp.mapper;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.hmdp.entity.Shop;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 /**
  * <p>
@@ -12,5 +16,9 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @since 2021-12-22
  */
 public interface ShopMapper extends BaseMapper<Shop> {
+
+    IPage<Shop> pageShop(IPage<Shop> page);
+
+    List<Shop> pageShop2(IPage<Shop> page);
 
 }
